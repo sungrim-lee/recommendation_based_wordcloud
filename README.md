@@ -2,7 +2,7 @@
 ## GROUP18
 
 ## Summary 
-### This repository contains an Image folder, and CODE folder for pipelines that we followed such as EDA, preprocessing, model building, and textual analysis, Shiny folder where it includes a python shiny app code file and data.zip file.
+### This repository contains an Image folder, Data folder, and CODE folder for pipelines that we followed such as EDA, preprocessing, model building, and textual analysis, Shiny folder where it includes a python shiny app code file and data.zip file. * For the Data folder, most of the files are over 100MB even after cleaning data, so our group recommends to get raw files through the canvas link and implement codes to get cleaned data.
 
 ## Project Environment
 ### Python 3 - EDA on Mac Pro
