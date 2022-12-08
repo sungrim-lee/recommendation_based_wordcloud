@@ -300,6 +300,10 @@ app_ui = ui.page_fluid(
                         {'1': 1, '2': 2, '3': 3, '4': 4}
                     ),
                     ui.input_action_button("run", "Run", class_="btn-success"),
+                    ui.tags.br(),
+                    ui.tags.br(),
+                    ui.tags.small("*Please reach out to us if you may have questions: slee2253@wisc.edu, hyan92@wisc.edu, mpei3@wisc.edu."),
+                
                 ),
                 ui.panel_main(
                     ui.output_plot("plot"),
@@ -408,10 +412,16 @@ def server(input, output, session):
         b_id = input.text_id()
         if not files or not b_id:
             return ['','','','']
-       
-        city_b_path = Path(__file__).parent / "city_business.csv"
+        # files = sorted(files, key=lambda x:x['name'])
+        # file_paths = list(map(lambda x:x['datapath'] , files))
+        city_b_path = 'city_business.csv'
+        ratings_path = 'rating_history.csv'
+        
+        
+        user_business_df = pd.read_csv(ratings_path)
         b_info = get_business_info_from_id(b_id, city_b_path)
         return print_business_info(b_info)
+    
         
     @output
     @render.text
